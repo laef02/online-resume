@@ -157,6 +157,12 @@ var education = {
      "school": "Udacity",
      "dates": "October 2017",
       "url": "https://www.udacity.com/course/intro-to-programming-nanodegree--nd000"
+    },
+    {"title": "Visual Design",
+     "titleURL" : "https://generalassemb.ly/",
+     "school": "General Assembly",
+     "dates": "November 2017",
+      "url": "https://generalassemb.ly/education/visual-design"
     }
   ]
 };
@@ -209,6 +215,8 @@ education.display = function() {
       $(".education-entry:last").append(formattedHeader);
       $(".education-entry:last").append(formattedDates);
       $(".education-entry:last").append(formattedUrl);
+
+
   });
 };
 education.display();
