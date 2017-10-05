@@ -272,9 +272,9 @@ projects.display = function() {
       $("#projects").append(HTMLprojectStart);
       var formattedImage = HTMLprojectImage.replace("%data%", project.images[0]);
       $(".project-entry:last").append(formattedImage);
-      var formattedImage = HTMLprojectImage.replace("%data%", project.images[1]);
+      formattedImage = HTMLprojectImage.replace("%data%", project.images[1]);
       $(".project-entry:last").append(formattedImage);
-    };
+    }
   });
 };
 
