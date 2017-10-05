@@ -64,7 +64,7 @@ var work = {
       "employer" : "Miele Associates, LLP",
       "website" : "http://www.mieleassociates.com/",
       "dates" : "2015-2017",
-      "location" : ", New York",
+      "location" : "New York",
       "description" : "Played key role in designing projects for clients. Created assembly and layout drawings using AutoCAD. Interpreted drawing markups and implemented drawing revisions provided by engineers. Generated new ideas with limited direction and varied internal client needs. Presented projects to internal clients."
 
     },
@@ -73,7 +73,7 @@ var work = {
       "employer" : "Bounce Creative Group",
       "website" : "https://www.linkedin.com/company/5344966/",
       "dates" : "2015-2016",
-      "location" : ", New York",
+      "location" : "New York",
       "description" : "Designed new on-brand visual elements to effectively convey concepts and messaging. Maintained consistent use of graphic imagery in materials and other marketing outreach. Formatted text and graphics for blog posts, newsletters and other materials."
     }
   ]
