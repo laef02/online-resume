@@ -9,7 +9,7 @@ var bio = {
   "location" : "New York, NY",
   },
   "welcomeMessage": "lLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-  "skills" : ["Photoshop", "Sketch", "AutoCad", "Java"],
+  "skills" : ["Photoshop", "Sketch", "Python", "Java"],
   "bioPic" : "images/profile.jpg"
 };
 
@@ -183,14 +183,16 @@ education.display = function() {
 
     var formattedMajor = HTMLschoolMajor.replace("%data%", school.major);
 
+    var formattedHead = formattedName + formattedDegree;
 
 
 
 
-      $(".education-entry:last").append(formattedName);
-      $(".education-entry:last").append(formattedDegree);
-      $(".education-entry:last").append(formattedCity);
+      $(".education-entry:last").append(formattedHead);
+      // $(".education-entry:last").append(formattedDegree);
+
       $(".education-entry:last").append(formattedDates);
+      $(".education-entry:last").append(formattedCity);
       $(".education-entry:last").append(formattedMajor);
 
   });
@@ -229,12 +231,14 @@ var projects = {
   "projects": [
   {
   "title": "Make A Web Page",
+  "url" : "https://www.udacity.com/course/intro-to-programming-nanodegree--nd000",
   "dates": "2017",
   "description": "Built using HTML and CSS, this project demonstrates knowledge of basic website design.",
   "images": "images/web.jpg"
   },
   {
     "title": "Create A Movie Website",
+    "url" : "https://www.udacity.com/course/intro-to-programming-nanodegree--nd000",
     "dates": "2017",
     "description": "Created a simple movie website with images and trailers, this project demonstrates knowledge of Object Oriented Programming.",
     "images": "images/web1.jpg"
@@ -249,7 +253,7 @@ projects.display = function() {
   projects.projects.forEach(project => {
     $("#projects").append(HTMLprojectStart);
 
-    var formattedTitle = HTMLprojectTitle.replace("%data%", project.title);
+    var formattedTitle = HTMLprojectTitle.replace("%data%", project.title).replace("#", project.url);
     $(".project-entry:last").append(formattedTitle);
 
     var formattedDates = HTMLprojectDates.replace("%data%", project.dates);
