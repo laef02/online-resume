@@ -11,7 +11,7 @@ var bio = {
   "welcomeMessage": "lLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
   "skills" : ["Photoshop", "Sketch", "AutoCad", "Java"],
   "bioPic" : "images/profile.jpg"
-}
+};
 
 
 
@@ -77,7 +77,7 @@ var work = {
       "description" : "Designed new on-brand visual elements to effectively convey concepts and messaging. Maintained consistent use of graphic imagery in materials and other marketing outreach. Formatted text and graphics for blog posts, newsletters and other materials."
     }
   ]
-}
+};
 
 work.display = function() {
   work.jobs.forEach(job => {
@@ -101,8 +101,8 @@ work.display = function() {
 
 
 
-  })
-}
+  });
+};
 work.display();
 
 
@@ -156,7 +156,7 @@ var education = {
       "url": "https://www.udacity.com/course/intro-to-programming-nanodegree--nd000"
     }
   ]
-}
+};
 
 
 
@@ -177,7 +177,7 @@ education.display = function() {
       $(".education-entry:last").append(formattedCity);
       $(".education-entry:last").append(formattedDegree);
       $(".education-entry:last").append(formattedMajor);
-  })
+  });
 
   $("#education:last").append(HTMLonlineClasses);
 
@@ -199,8 +199,8 @@ education.display = function() {
       $(".education-entry:last").append(formattedHeader);
       $(".education-entry:last").append(formattedDates);
       $(".education-entry:last").append(formattedUrl);
-  })
-}
+  });
+};
 education.display();
 
 
@@ -244,8 +244,8 @@ projects.display = function() {
       var formattedImage = HTMLprojectImage.replace("%data%", project.images);
       $(".project-entry:last").append(formattedImage);
       }
-  })
-}
+  });
+};
 
 
 projects.display();
