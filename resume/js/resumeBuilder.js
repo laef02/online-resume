@@ -8,8 +8,7 @@ var bio = {
   "github" : "@laef02",
   "location" : "New York, NY",
   },
-  "welcomeMessage": "lLorem ipsum dolor sit amet, consectetur adipiscing elit,"
-  + " sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut" +  "enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut" + "aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in" + "voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint"+ " occaecat cupidatat non proident, sunt in culpa qui officia deserunt" + " mollit anim id est laborum.",
+  "welcomeMessage": "lLorem ipsum dolor sit amet, consectetur adipiscing elit," + "sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut" +  "enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut" + "aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in" + "voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint"+ "occaecat cupidatat non proident, sunt in culpa qui officia deserunt" + "mollit anim id est laborum.",
   "skills" : ["Photoshop", "Sketch", "Python", "Java"],
   "biopic" : "images/profile.jpg"
 };
@@ -58,7 +57,7 @@ bio.display = function() {
         $("#footerContacts").append(formattedGit);
         $("#footerContacts").append(formattedLocation);
 
-}
+};
 bio.display();
 
 
@@ -274,10 +273,8 @@ projects.display = function() {
       var formattedImage = HTMLprojectImage.replace("%data%", project.images[0]);
       $(".project-entry:last").append(formattedImage);
       var formattedImage = HTMLprojectImage.replace("%data%", project.images[1]);
-      $(".project-entry:last").append(formattedImage);var formattedImage = HTMLprojectImage.replace("%data%", project.images[2]);
-      $(".project-entry:last").append(formattedImage);var formattedImage = HTMLprojectImage.replace("%data%", project.images[3]);
       $(".project-entry:last").append(formattedImage);
-     }
+    };
   });
 };
 
