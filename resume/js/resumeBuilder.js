@@ -112,45 +112,48 @@ work.display();
 var education = {
   "schools": [
     {
-      "name": "Adelphi",
-      "city": "Garden City",
+      "name": "Adelphi University",
       "degree": "BFA",
-      "major": "Fine Arts"
+      "city": "Garden City, NY",
+      "major": "Studio Art",
+      "dates" : "2011-2015",
+      "url" : "http://www.adelphi.edu/"
     },
-    {
-      "name": "Hillel Academy",
-      "city": "Kingston, Jamaica",
-      "degree": "GED",
-      "major": "N/A"
-    }
+
   ],
   "onlineCourses": [
     { "title": "Digital Marketing Nanodegree",
+     "titleURL" : "https://www.udacity.com/",
      "school": "Udacity",
      "dates": "August 2017",
       "url": "https://www.udacity.com/course/digital-marketing-nanodegree--nd0188"
     },
     {"title": "Introduction to UI Design",
+     "titleURL" : "https://www.coursera.org/",
      "school": "Coursera",
      "dates": "August 2017",
       "url": "https://www.coursera.org/learn/ui-design"
     },
     {"title": "User Research and Design",
+     "titleURL" : "https://www.coursera.org/",
      "school": "Coursera",
      "dates": "August 2017",
       "url": "https://www.coursera.org/learn/design-research"
     },
     {"title": "Prototyping and Design",
+     "titleURL" : "https://www.coursera.org/",
      "school": "Coursera",
      "dates": "August 2017",
       "url": "https://www.coursera.org/learn/prototyping-design"
     },
     {"title": "Evaluating User Interfaces",
+     "titleURL" : "https://www.coursera.org/",
      "school": "Coursera",
      "dates": "August 2017",
       "url": "https://www.coursera.org/learn/ui-testing"
     },
     {"title": "Intro to Programming",
+     "titleURL" : "https://www.udacity.com/",
      "school": "Udacity",
      "dates": "October 2017",
       "url": "https://www.udacity.com/course/intro-to-programming-nanodegree--nd000"
@@ -164,19 +167,26 @@ education.display = function() {
   education.schools.forEach(school => {
     $("#education").append(HTMLschoolStart);
 
-    var formattedName = HTMLschoolName.replace("%data%", school.name);
+    var formattedName = HTMLschoolName.replace("%data%", school.name).replace("#", school.url);
+
+    var formattedDegree = HTMLschoolDates.replace("%data%", school.degree);
 
     var formattedCity = HTMLschoolLocation.replace("%data%", school.city);
 
-    var formattedDegree = HTMLschoolDates.replace("%data%", school.degree);
+    var formattedDates = HTMLschoolDates.replace("%data%", school.dates);
 
     var formattedMajor = HTMLschoolMajor.replace("%data%", school.major);
 
 
+
+
+
       $(".education-entry:last").append(formattedName);
-      $(".education-entry:last").append(formattedCity);
       $(".education-entry:last").append(formattedDegree);
+      $(".education-entry:last").append(formattedCity);
+      $(".education-entry:last").append(formattedDates);
       $(".education-entry:last").append(formattedMajor);
+
   });
 
   $("#education:last").append(HTMLonlineClasses);
@@ -184,7 +194,7 @@ education.display = function() {
   education.onlineCourses.forEach(course => {
     $("#education").append(HTMLschoolStart);
 
-    var formattedTitle = HTMLonlineTitle.replace("%data%", course.title);
+    var formattedTitle = HTMLonlineTitle.replace("%data%", course.title).replace("#", course.titleURL);
 
     var formattedSchool = HTMLonlineSchool.replace("%data%", course.school);
 
