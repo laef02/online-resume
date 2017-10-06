@@ -47,15 +47,15 @@ bio.display = function() {
    var formattedLocation = HTMLlocation.replace("%data%", bio.contacts.location);
    var formattedGit = HTMLgithub.replace("%data%", bio.contacts.github);
 
-        $("#topContacts").append(formattedMobile);
-        $("#topContacts").append(formattedEmail);
-        $("#topContacts").append(formattedGit);
-        $("#topContacts").append(formattedLocation);
-
-        $("#footerContacts").append(formattedMobile);
-        $("#footerContacts").append(formattedEmail);
-        $("#footerContacts").append(formattedGit);
-        $("#footerContacts").append(formattedLocation);
+        $("#topContacts, #footerContacts").append(formattedMobile);
+        $("#topContacts, #footerContacts").append(formattedEmail);
+        $("#topContacts, #footerContacts").append(formattedGit);
+        $("#topContacts, #footerContacts").append(formattedLocation);
+        // 
+        // $("#footerContacts").append(formattedMobile);
+        // $("#footerContacts").append(formattedEmail);
+        // $("#footerContacts").append(formattedGit);
+        // $("#footerContacts").append(formattedLocation);
 
 };
 bio.display();
